@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"><head profile="http://www.w3.org/2005/10/profile"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Hukum Newton II</title>
+	
+	<meta name="viewport" content="width=device-width; initial-scale=1.0"> 
+	<meta name="keywords" content=""> 
+	<meta name="description" content="">
+ 	<!-- main css -->
+	<link href="./Average Force Calculator_files/style.css" rel="stylesheet" type="text/css">
+
+</head> 
+<body>
+<center>
+<a href="Average Angular Acceleration Calculator.html" title="Percepatan Sudut"><img src="../img/arrow2.png" width="100" height="100" border="0"></a> <a href="../index.html" title="Home"><img src="../img/homeicon.png" height="100" width="100"></a>  <a href="Kinetic Energy Calculator, Calculate Mass, Velocity..html" title="Energi Kinetik"><img src="../img/arrow.png" height="100" width="100"></a>
+
+  <!-- content_left begins -->
+  <div class="content_left clearfix"><!-- ad begins -->
+<div class="clear"> </div>
+<font color="#FFFFFF" size="+2">Hukum Newton II</font>
+<p style="font-size:0.95em; color:#FFF">Percepatan yang ditimbulkan oleh gaya yang bekerja pada suatu benda berbanding lurus dengan besar gaya nya dan berbanding terbalik dengan massa benda </p>  
+     <!-- ec_calculator begins -->
+     <div class="ec_calculator_gen clearfix">
+		<div class="clear"></div>
+	<form name="first">
+	 <div id="overlayLoader" style="top: 465.5px; display: none;">
+		    <div class="loader"> </div>
+	  </div>
+		<div id="dispCalcConts" style="opacity: 1;"><div class="group clearfix">
+<label>Massa</label>
+<span class="width_80"><input id="mhname" type="text" class="easypositive">
+</span> <span class="easyweightunits" id="munit"><select id="unitConvmunit" onchange="calculate()"><option value="0.001">kg </option></select></span>
+</div>
+<div class="group clearfix">
+<label>Kecepatan Akhir</label>
+<span class="width_100"><input id="fhname" type="text" class="easypositive">
+</span> <span class="units" id="funit"></span><span>m/s</span>
+</div>
+<div class="group clearfix">
+<label>Kecepatan Awal</label>
+<span class="width_100"><input id="ihname" type="text" class="easypositive">
+</span> <span class="units" id="iunit"></span><span>m/s</span>
+</div>
+<div class="group clearfix">
+<label>Waktu</label>
+<span class="width_100"><input id="thname" type="text" class="easypositive">
+</span> <span class="units" id="tunit"></span><span>s</span>
+</div>
+<input type="button" value="Calculate" onclick="calculate()" style="visibility: visible;"><input type="reset" value="Reset" style="visibility: visible;"><div class="errClass" id="dynErrDisp"></div><div id="calciScroll"></div><div class="result group clearfix"><label>Gaya</label><span class="width_100"><input id="ahname" type="text" class="easypositive" readonly>
+</span> <span class="" id="aunit"></span><span>N</span>
+</div>
+
+</div>	</form>
+     </div>
+     <!-- ec_calculator ends -->
+     <div class="clear"> </div>
+<script type="text/javascript">
+	var easyinputs = document.getElementsByTagName("INPUT");
+	for (var ies = 0; ies < easyinputs.length; ies++)
+	{
+	    if (easyinputs[ies].type === 'button')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+		if ((easyinputs[ies].offsetTop-10)<0)
+		{
+			document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+		}
+		else
+		{
+			document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+		}
+	    }
+	    else
+	    {
+		document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+	    }
+	    if (easyinputs[ies].type === 'reset')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+	    }
+	}
+</script>
+
+<div><div class="f_right"></div></div><div class="clearfix"></div><div class="formula clearfix"> <h4>Rumus:</h4>
+        <font>F=m*(v- v0)/t
+</font>
+        <b>Dimana,</b>
+F = Gaya
+m = Massa
+v0= Kecepatan Awal
+v = Kecepatan Akhir
+t = Waktu
+</div>
+<script type="text/javascript">
+	var chf_rss=true;
+	function getPathFromUrl(url){return url.split("?")[0];}
+	var curUrl = window.location.pathname; 
+	var basName = curUrl.replace(/^.*[\/\\]/g, '');
+</script>
+	<script src="./Average Force Calculator_files/jquery.min.js.download"></script>
+<script src="./Average Force Calculator_files/common.js.download"></script>
+<script src="./Average Force Calculator_files/jquery.sticky.js.download"></script>
+<script>
+var aresult;
+
+ function calculate(){
+var mhname = easyCommonInputCalculation('m','easyweight','Mass');
+var fhname = easyCommonInputCalculation('f','','Final Velocity ');
+var ihname = easyCommonInputCalculation('i','','Initial Velocity');
+var thname = easyCommonInputCalculation('t','','Time');
+if(fhname>ihname)
+{
+aresult = (mhname/1000000)*(fhname-ihname)/thname;
+var ahname = easyCommonResultCalculation('a','easy');
+$('#ahname').val(easyRoundOf(ahname,4));
+}
+else
+{
+alert('Final Velocity should be greater initial velocity');
+}
+}
+ </script>
+		<script type="text/javascript">
+		function alert(val)
+		{
+		    $("#dynErrDisp").show();
+		    $("#dynErrDisp").html(val);
+		}
+		$(document).ready(function() {
+			closeModal();
+		});
+		</script>
+    <script>
+	$(document).ready(function() {
+	    chf_utils();
+	});
+    </script>
+    <script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+</center>
+</body></html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"><head profile="http://www.w3.org/2005/10/profile"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" href="https://www.easycalculation.com/favicon.ico" type="image/x-icon">
+
+	<title>Kalkulator Percepatan Sudut</title>
+	
+	<meta name="viewport" content="width=device-width; initial-scale=1.0"> 
+	<meta name="keywords" content="Average Angular Acceleration Calculator, Average Angular Acceleration, Angular Acceleration Calculator, Angular Acceleration, Physics Calculator, Rotational Acceleration Calculator, Rotational Acceleration, "> 
+	<meta name="description" content="Average Angular Acceleration Calculator Online to Find the rate of change of angular velocity to time taken.">
+ 	<!-- main css -->
+	<link href="./Average Angular Acceleration Calculator_files/style.css" rel="stylesheet" type="text/css">
+</head> 
+<body>
+<center>
+<a href="Velocity Calculator, Calculate Initial Velocity, Acceleration, Time Period for Constant Acceleration Formula..html" title="Kecepatan GLBB"><img src="../img/arrow2.png" height="100" width="100"></a> <a href="../index.html" title="Home"><img src="../img/homeicon.png" height="100" width="100"></a>  <a href="Average Force Calculator.html" title="Hukum Newton II"><img src="../img/arrow.png" height="100" width="100"></a>
+<div class="content_left clearfix">
+<font color="#FFFFFF" size="+2"> Percepatan Sudut</font>
+<p style="font-size:0.95em; color:#FFF">Percepatan sudut adalah laju perubahan kecepatan sudut terhadap waktu</p></font>  
+     <!-- ec_calculator begins -->
+     <div class="ec_calculator_gen clearfix">
+	<font color="#FFFFFF" size="+2">Menghitung Percepatan Sudut</font>
+		<div class="clearfix"></div>	<div class="clear"></div>
+	<form name="first">
+	 <div id="overlayLoader" style="top: 478px; display: none;">
+		    <div class="loader"> </div>
+		</div>
+		<div id="dispCalcConts" style="opacity: 1;"><div class="group clearfix">
+<label><font color="#FFFFFF">Perubahan Kecepatan Sudut</label>
+<span class="width_100"><input id="whname" type="text" class="easypositive">
+</span> <span class="units" id="wunit">rad/sec</span>
+</div>
+<div class="group clearfix">
+<label>Perubahan Waktu</label>
+<span class="width_100"><input id="thname" type="text" class="easypositive">
+</span> <span class="units" id="tunit">sec</span>
+</div></font>
+<input type="button" value="Calculate" onclick="calculate()" style="visibility: visible;"><input type="reset" value="Reset" style="visibility: visible;"><div class="errClass" id="dynErrDisp"></div><div id="calciScroll"></div>
+<div class="result group clearfix"><label><font color="#000000">Percepatan Sudut</font></label><span class="width_100"><input id="ahname" type="text" class="easypositive" readonly>
+</span> <span class="" id="aunit">rad/s<sup>2</sup></span>
+</div>
+
+</div>	</form>
+     </div>
+     <!-- ec_calculator ends -->
+     <div class="clear"> </div>
+<script type="text/javascript">
+	var easyinputs = document.getElementsByTagName("INPUT");
+	for (var ies = 0; ies < easyinputs.length; ies++)
+	{
+	    if (easyinputs[ies].type === 'button')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+		if ((easyinputs[ies].offsetTop-10)<0)
+		{
+			document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+		}
+		else
+		{
+			document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+		}
+	    }
+	    else
+	    {
+		document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+	    }
+	    if (easyinputs[ies].type === 'reset')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+	    }
+	}
+</script>
+<div class="clear"> </div>
+</div><div class="formula clearfix"> <h4>Rumusa:</h4>
+        <font>α = Δω / Δt
+</font>
+        <b>Dimana,</b>
+α = Percepatan Sudut
+Δω = Perubahan Percepatan Sudut
+Δt = Perubahan Waktu
+</div>
+<div class="calc_example clearfix">
+<div class="calc_example_con clearfix">
+<!-- content_left ends -->
+
+<script type="text/javascript">
+	var chf_rss=true;
+	function getPathFromUrl(url){return url.split("?")[0];}
+	var curUrl = window.location.pathname; 
+	var basName = curUrl.replace(/^.*[\/\\]/g, '');
+</script>
+	<script src="./Average Angular Acceleration Calculator_files/jquery.min.js.download"></script>
+<script src="./Average Angular Acceleration Calculator_files/common.js.download"></script>
+<script src="./Average Angular Acceleration Calculator_files/jquery.sticky.js.download"></script>
+<script>
+var aresult;
+
+function calculate(){
+var thname = easyCommonInputCalculation('t','','Change in Time');
+var whname = easyCommonInputCalculation('w','','Change Angular Speed');
+aresult = whname/thname;
+var ahname = easyCommonResultCalculation('a','easyrad/s<sup>2</sup>');
+$('#ahname').val(easyRoundOf(ahname,4));
+}
+ </script>
+		<script type="text/javascript">
+		function alert(val)
+		{
+		    $("#dynErrDisp").show();
+		    $("#dynErrDisp").html(val);
+		}
+		$(document).ready(function() {
+			closeModal();
+		});
+		</script>
+    <script>
+	$(document).ready(function() {
+	    chf_utils();
+	});
+    </script>
+    <script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+</body></html>

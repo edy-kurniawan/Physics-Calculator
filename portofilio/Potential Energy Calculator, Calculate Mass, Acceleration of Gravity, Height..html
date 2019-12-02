@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head profile="http://www.w3.org/2005/10/profile"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="shortcut icon" href="../img/profile3.png"image/x-icon">
+
+	<title>Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height. </title>
+	
+	<meta name="viewport" content="width=device-width; initial-scale=1.0"> 
+	<meta name="keywords" content=""> 
+	<meta name="description" content="">
+ 	<!-- main css -->
+	<link href="./Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height._files/style.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+	body,td,th {
+	color: #FFF;
+}
+    </style>
+	
+</head> 
+<body> <center>
+
+ <a href="Kinetic Energy Calculator, Calculate Mass, Velocity..html" title="Energi Kinetik"><img src="../img/arrow2.png" height="100" width="100"></a> <a href="../index.html" title="Home"><img src="../img/homeicon.png" height="100" width="100"></a>  <a href="Power Calculator _ Calculate Power P=MV (Mass _ Velcoity).html" title="Momentum"><img src="../img/arrow.png" height="100" width="100"></a>
+   
+  <!-- content_left begins -->
+  <div class="content_left clearfix">
+<h1><font color="#FFFFFF">Energi Potensial</font></h1>
+<p style="font-size:0.95em; color:#FFF">Energi Potensial adalah energi yang dimiliki suatu benda karena memiliki suatu kettingian tertentu dari tanah</p><div class="clear"> </div>
+<div style="padding-top:5px"></div>
+ 
+     <!-- ec_calculator begins -->
+     <div class="ec_calculator_gen clearfix">
+	<h2><font color="#FFFFFF">Menghitung</font></h2>
+		<div class="clearfix"></div>	<div class="clear"></div>
+	<form name="first">
+	 <div id="overlayLoader" style="top: 602.25px; display: none;">
+		    <div class="loader"> </div>
+		</div>
+		<div id="dispCalcConts" style="opacity: 1;"><div class="group clearfix">
+       <label></label>
+       <select id="ss" onchange="modf()">
+			<option value="4">Energi Potensial(PE)</option>
+			<option value="1">Massa(m)</option>
+			<option value="3">Percepatan Grafitasi(g)</option>
+			<option value="2">Tinggi(h)</option>
+			</select>
+     </div>
+     <div class="group clearfix">
+       <label>Massa(m)</label>
+       <span class="width_100"><input id="res1" type="text" size="10" class="easypositive"></span><span>kg</span>
+     </div>
+     <div class="group clearfix">
+       <label>Percepatan grafitasi(g)</label>
+       <span class="width_100"><input id="res2" type="text" size="10"value="9.8" class="easypositive"></span><span> m/s<sup>2</sup></span>
+     </div>
+     <div class="group clearfix">
+       <label>Tinggi(h)</label>
+       <span class="width_100"><input id="res3" type="text" size="10"  class="easypositive"></span><span>m</span>
+     </div>
+     <div class="group clearfix">
+       <label>Energi Potensial(PE)</label>
+       <span class="width_100"><input id="res4" type="text" size="10" class="easypositive"></span><span>J</span>
+     </div>
+     <input type="button" value="Calculate" class="calc" onclick="calsi()" style="visibility: visible;"><input type="reset" value="Reset" style="visibility: visible;"><div class="errClass" id="dynErrDisp"></div><div id="calciScroll"></div></div>	</form>
+     </div>
+</center>
+     <!-- ec_calculator ends -->
+     <div class="clear"> </div>
+<script type="text/javascript">
+	var easyinputs = document.getElementsByTagName("INPUT");
+	for (var ies = 0; ies < easyinputs.length; ies++)
+	{
+	    if (easyinputs[ies].type === 'button')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+		if ((easyinputs[ies].offsetTop-10)<0)
+		{
+			document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+		}
+		else
+		{
+			document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+		}
+	    }
+	    else
+	    {
+		document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+	    }
+	    if (easyinputs[ies].type === 'reset')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+	    }
+	}
+</script>
+<center>
+<div><div class="f_right"></div></div><div class="clearfix"></div><div class="formula">	<h4>Energi Potensial:</h4> <font>PE = m x g x h</font>
+	<h4>Massa:</h4>  <img src="./Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height._files/potential-mass-formula.gif">
+	<h4>Percepatan Grafitasi:</h4>  <img src="./Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height._files/potential-grav-formula.gif">
+	<h4>Tinggi:</h4>  <img src="./Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height._files/potential-height-formula.gif">
+	<b>Dimana,</b>
+	m = Massa, 
+	g = Percepatan Grafitasi
+	h = Height
+	Percepatan Grafitasi Bumi 9.8 m/sec2. </div> 
+</center>
+ 
+  <!-- content_left ends -->
+
+<script type="text/javascript">
+	var chf_rss=true;
+	function getPathFromUrl(url){return url.split("?")[0];}
+	var curUrl = window.location.pathname; 
+	var basName = curUrl.replace(/^.*[\/\\]/g, '');
+</script>
+	<script src="./Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height._files/jquery.min.js.download"></script>
+<script src="./Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height._files/common.js.download"></script>
+<script src="./Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height._files/jquery.sticky.js.download"></script>
+<!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+
+<script type="text/javascript">
+
+function calsi()
+{
+	var ty = $("#ss").val();
+	var m = $("#res1").val();
+	var g = $("#res2").val();
+	var h = $("#res3").val();
+	var p = $("#res4").val();
+
+	if(ty == 1)
+		m = null;
+	if(ty == 2)
+		g = null;
+	if(ty == 3)
+		h = null;
+	if(ty == 4)
+		p = null;
+	
+	if(m == "" || g == "" || h == "" || p == "")
+	{
+		alert(" Please enter all required feilds ");
+	}
+
+	if(m != null && g != null && h != null){
+		p = Math.round(m*g*h*100)/100;
+		$("#res4").val(p);
+	}
+	else if(p != null && g != null && h != null){
+		m = Math.round((p/(g*h))*100)/100;
+		$("#res1").val(m);
+	}
+	else if(m != null && p != null && h != null){
+		g = Math.round((p/(m*h))*100)/100;
+		$("#res2").val(g);
+	}
+	else if(m != null && p != null && g != null){
+		h = Math.round((p/(m*g))*100)/100;
+		$("#res3").val(h);
+	}
+	return false;
+}
+
+function modf()
+{
+	for(var h=1; h<5; h++)
+	{
+		var dd = "document.getElementById('res"+h+"')";
+		ss = eval(dd);
+		ss.disabled=false;
+		//ss.style.backgroundColor="#eefaff";
+		//ss.style.color= "#000000";
+	}
+	var vv = $("#ss").val();
+	sse(vv);
+}
+
+function sse(vv){
+	var dd = "document.getElementById('res"+vv+"')";
+	ss = eval(dd);
+	ss.disabled=true;
+	ss.value="";
+	//ss.style.color= "black";
+	//ss.style.backgroundColor="#bbc7dd";
+}
+
+</script>		<script type="text/javascript">
+		function alert(val)
+		{
+		    $("#dynErrDisp").show();
+		    $("#dynErrDisp").html(val);
+		}
+		$(document).ready(function() {
+			closeModal();
+		});
+		</script>
+    <script>
+	$(document).ready(function() {
+	    chf_utils();
+	});
+    </script>
+    <script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+</body></html>

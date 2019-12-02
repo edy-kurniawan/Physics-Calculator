@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Energi Kinetik</title>
+	
+	<meta name="viewport" content="width=device-width; initial-scale=1.0"> 
+	<meta name="keywords" content=""> 
+	<meta name="description" content="">
+ 	<!-- main css -->
+	<link href="./Kinetic Energy Calculator, Calculate Mass, Velocity._files/style.css" rel="stylesheet" type="text/css">
+	
+		    
+</head> 
+<body>
+
+  <!-- content_left begins -->
+ <center>
+<a href="Average Force Calculator.html" title="Hukum Newton II"><img src="../img/arrow2.png" height="100" width="100"></a><a href="../index.html" title="Home"><img src="../img/homeicon.png" height="100" width="100"></a><a href="Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height..html" title="Energi Potensial"><img src="../img/arrow.png" height="100" width="100"></a>
+   
+   <div class="content_left clearfix">
+<h1><font color="#FFFFFF">Energi Kinetik</font></h1>
+   <div class="down_load_menu clearfix"></div>
+
+<p style="font-size:0.95em;"><font color="#FFFFFF"><br>Energi Kinetik adalah energi yang dimiliki oleh suatu benda karena gerakanya</br></p></p></font><div class="clear"> </div>
+<div style="padding-top:5px"></div>
+ 
+     <!-- ec_calculator begins -->
+     <div class="ec_calculator_gen clearfix">
+	<h2><font color="#FFFFFF">Menghitung</h2>
+		<div class="clearfix"></div>	<div class="clear"></div>
+	<form name="first">
+	 <div id="overlayLoader" style="top: 605.5px; display: none;">
+		    <div class="loader"> </div>
+	  </div>
+		<div id="dispCalcConts" style="opacity: 1;"><div class="group clearfix">
+       <label></label>
+       <select id="ss" onchange="modf()">
+			<option value="3"><font color="#FFFFFF">Energi Kinetik(KE)</option>
+			<option value="1">Massa(M)</option>
+			<option value="2">Kecepatan(V)</font></option>
+		  </select>
+     </div>
+     <div class="group clearfix">
+       <label>Massa(M)</label>
+       <span class="width_100"><input id="res1" type="text" size="10" class="easypositive"></span><span>kg</span>
+     </div>
+     <div class="group clearfix">
+       <label>Kecepatan(V)</label>
+       <span class="width_100"><input id="res2" type="text" size="10" class="easypositive"></span><span>m/s</span>
+     </div>
+<div class="group clearfix">
+       <label>Energi Kinetik(KE)</label>
+       <span class="width_100"><input id="res3" type="text" size="10" class="easypositive"></span><span>J</font></span>
+     </div>
+<input type="button" value="Calculate" onclick="calsi()" style="visibility: visible;"><input type="reset" value="Reset" style="visibility: visible;"><div class="errClass" id="dynErrDisp"></div><div id="calciScroll"></div><div class="errClass" id="dynErrDisp" style="display: none;"></div><div id="calciScroll"></div><div class="errClass" id="dynErrDisp" style="display: none;"></div><div id="calciScroll"></div></div>	</form>
+     </div>
+     <!-- ec_calculator ends -->
+     <div class="clear"> </div>
+<script type="text/javascript">
+	var easyinputs = document.getElementsByTagName("INPUT");
+	for (var ies = 0; ies < easyinputs.length; ies++)
+	{
+	    if (easyinputs[ies].type === 'button')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+		if ((easyinputs[ies].offsetTop-10)<0)
+		{
+			document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+		}
+		else
+		{
+			document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+		}
+	    }
+	    else
+	    {
+		document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+	    }
+	    if (easyinputs[ies].type === 'reset')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+	    }
+	}
+</script>
+
+ <div class="f_right"></div></div><div class="clearfix"></div>
+ <div class="clearfix"> </div> </div><div class="formula">	<h4>Energi Kinetik:</h4> <font>E<sub>k</sub> = ½ mv<sup>2</sup></font>
+	<h4>Massa:</h4> <font>m = E<sub>k</sub> / ½ v<sup>2</sup></font>
+	<h4>Kecepatan:</h4> <img src="./Kinetic Energy Calculator, Calculate Mass, Velocity._files/kinetic-formula.gif"> <br>
+	<b>Dimana,</b>
+	m = Massa, 
+	v = Kecepatan.</div><div class="clear"> </div><div class="paddingTop"></div><div class="clearfix"></div>
+  </div>
+
+<!-- content ends -->
+
+<script type="text/javascript">
+	var chf_rss=true;
+	function getPathFromUrl(url){return url.split("?")[0];}
+	var curUrl = window.location.pathname; 
+	var basName = curUrl.replace(/^.*[\/\\]/g, '');
+</script>
+	<script src="./Kinetic Energy Calculator, Calculate Mass, Velocity._files/jquery.min.js.download"></script>
+<script src="./Kinetic Energy Calculator, Calculate Mass, Velocity._files/common.js.download"></script>
+<script src="./Kinetic Energy Calculator, Calculate Mass, Velocity._files/jquery.sticky.js.download"></script>
+
+<script type="text/javascript">
+function calsi()
+{
+	var ty = $("#ss").val();
+	var m = $("#res1").val();
+	var v = $("#res2").val();
+	var k = $("#res3").val();
+		
+
+	if(ty == 1)
+		m = null;
+	if(ty == 2)
+		v = null;
+	if(ty == 3)
+		k = null;
+	
+	if(m == "" || v == "" || k == "")
+	{
+		alert(" Please enter all required feilds ");
+	}
+
+	if(m != null && v != null){
+		k = Math.round(0.5*m*v*v*100)/100;
+		$("#res3").val(k);
+	}
+	else if(v != null && k != null){
+		m = Math.round(((2*k)/(v*v))*100)/100;
+		$("#res1").val(m);
+	}
+	else if(m != null && k != null){
+		
+		v = Math.round(Math.sqrt((2*k)/m)*100)/100;
+		$("#res2").val(v);
+	}
+
+	return false;
+}
+
+function modf()
+{
+	for(var h=1; h<4; h++)
+	{
+		var dd = "document.getElementById('res"+h+"')";
+		ss = eval(dd);
+		ss.disabled=false;
+		//ss.style.backgroundColor="#eefaff";
+		//ss.style.color= "#000000";
+	}
+	var vv = $("#ss").val();
+	sse(vv);
+}
+
+function sse(vv){
+	var dd = "document.getElementById('res"+vv+"')";
+	ss = eval(dd);
+	ss.disabled=true;
+	ss.value="";
+	//ss.style.color= "black";
+	//ss.style.backgroundColor="#bbc7dd";
+}
+
+</script>		<script type="text/javascript">
+		function alert(val)
+		{
+		    $("#dynErrDisp").show();
+		    $("#dynErrDisp").html(val);
+		}
+		$(document).ready(function() {
+			closeModal();
+		});
+		</script>
+    <script>
+	$(document).ready(function() {
+	    chf_utils();
+	});
+    </script>
+    <script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+</center>
+</body></html>
+</body>

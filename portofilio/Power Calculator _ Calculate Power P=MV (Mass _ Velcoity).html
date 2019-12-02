@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"><head profile="http://www.w3.org/2005/10/profile"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" href="https://www.easycalculation.com/favicon.ico" type="image/x-icon">
+
+	<title>Kalkulator Momentum</title>
+	
+	<meta name="viewport" content="width=device-width; initial-scale=1.0"> 
+	<meta name="keywords" content="power calculator, calculate power, calculate power from mass and velocity, power mass velocity, physics calculator, p=mv, power=mass*velocity,"> 
+	<meta name="description" content="Online physics calculator to calculate power from mass and velocity.">
+ 	<!-- main css -->
+	<link href="./Power Calculator _ Calculate Power P=MV (Mass _ Velcoity)_files/style.css" rel="stylesheet" type="text/css">
+	
+</head> 
+<body>
+<center>
+ <a href="Potential Energy Calculator, Calculate Mass, Acceleration of Gravity, Height..html" title="Energi Potensial"><img src="../img/arrow2.png" height="100" width="100"></a> <a href="../index.html" title="Home"><img src="../img/homeicon.png" height="100" width="100"></a>  <a href="Velocity Calculator, Calculate Initial Velocity, Acceleration, Time Period for Constant Acceleration Formula..html" title="Kecepatan GLBB"><img src="../img/arrow.png" height="100" width="100"></a>
+  <!-- content_left begins -->
+  <div class="content_left clearfix"><!-- ad begins -->
+    <!-- Code to placed for 728x90 ad --><!-- Code to placed for 728x90 ad -->
+<!-- ad ends -->
+
+<font color="#FFFFFF" size="+2">Momentum (P=MV)</font>
+   <div class="down_load_menu clearfix"></div>
+<p style="font-size:0.95em; color:#FFF">momentum dapat didefinisikan sebagai perkalian antara massa benda dengan kecepatan benda </p>  
+     <!-- ec_calculator begins -->
+     <div class="ec_calculator_gen clearfix">
+	<font color="#FFFFFF"><font size="+1">Menghitung Momentum</font>
+		<div class="clearfix"></div>	<div class="clear"></div>
+	<form name="first">
+	 <div id="overlayLoader" style="top: 425.75px; display: none;">
+		    <div class="loader"> </div>
+		</div>
+		<div id="dispCalcConts" style="opacity: 1;"> <div class="group clearfix">
+       <label>Massa (m)</label>
+       <input type="text" id="inp1" class="easypositive" value="kg">
+		</div>
+      <div class="group clearfix">
+       <label>Kecepatan (v)</label>
+       <input type="text" id="inp2" class="easypositive" value="m/s">
+      </div>
+<input type="button" onclick="add()" value="Calculate" style="visibility: visible;"> <input type="reset" value="Reset" style="visibility: visible;"><div class="errClass" id="dynErrDisp"></div><div id="calciScroll"></div></font>
+     <div class="result">
+      <div class="group clearfix">
+       <label><font color="#000000">Momentum (P=MV)</label></font>
+       <input type="text" id="resl" readonly> 
+     </div>
+     </div></div>	</form>
+     </div>
+     <!-- ec_calculator ends -->
+     <div class="clear"> </div>
+<script type="text/javascript">
+	var easyinputs = document.getElementsByTagName("INPUT");
+	for (var ies = 0; ies < easyinputs.length; ies++)
+	{
+	    if (easyinputs[ies].type === 'button')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+		if ((easyinputs[ies].offsetTop-10)<0)
+		{
+			document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+		}
+		else
+		{
+			document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+		}
+	    }
+	    else
+	    {
+		document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+	    }
+	    if (easyinputs[ies].type === 'reset')
+	    { 
+		easyinputs[ies].style.visibility='hidden';
+	    }
+	}
+</script>
+
+<div></div><div class="formula">
+ <h4>Rumus:</h4>
+ <font>P=MV </font>
+<b>Dimana,   </b>
+P = Momentu,    
+M = Massa    
+V = Keceepatan </div><div class="clear"> </div><div class="clearfix"></div>
+</center>
+  <!-- content_left ends -->
+  
+<!-- content_right begins --><!-- content_right ends --></div>
+<!-- content ends -->
+
+<script type="text/javascript">
+	var chf_rss=true;
+	function getPathFromUrl(url){return url.split("?")[0];}
+	var curUrl = window.location.pathname; 
+	var basName = curUrl.replace(/^.*[\/\\]/g, '');
+</script>
+	<script src="./Power Calculator _ Calculate Power P=MV (Mass _ Velcoity)_files/jquery.min.js.download"></script>
+<script src="./Power Calculator _ Calculate Power P=MV (Mass _ Velcoity)_files/common.js.download"></script>
+<script src="./Power Calculator _ Calculate Power P=MV (Mass _ Velcoity)_files/jquery.sticky.js.download"></script>
+<!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+
+
+<script type="text/javascript">
+
+
+function add()
+{
+      var inp1 = $("#inp1").val();
+      var inp2 = $("#inp2").val();  
+      if(inp1=="" || inp2=="")
+      {
+          alert("Please enter all required feilds");
+          return false;
+      }
+      else
+      {
+          var resl = parseFloat(inp1) * parseFloat(inp2);
+          $("#resl").val(resl);
+      }
+}
+</script>		<script type="text/javascript">
+		function alert(val)
+		{
+		    $("#dynErrDisp").show();
+		    $("#dynErrDisp").html(val);
+		}
+		$(document).ready(function() {
+			closeModal();
+		});
+		</script>
+    <script>
+	$(document).ready(function() {
+	    chf_utils();
+	});
+    </script>
+    <script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+</body></html>
